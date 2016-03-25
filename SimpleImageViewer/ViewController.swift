@@ -33,7 +33,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        zoomFactor = 2.0
+        zoomToFit(nil)
     }
 
     override var representedObject: AnyObject? {

@@ -12,7 +12,6 @@
 		D049F5121CA499060078467D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D049F5111CA499060078467D /* Assets.xcassets */; };
 		D049F5151CA499060078467D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D049F5131CA499060078467D /* Main.storyboard */; };
 		D049F51F1CA49E1E0078467D /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049F51E1CA49E1E0078467D /* CenteringClipView.swift */; };
-		D09660E41CA5ADEB0025DF18 /* ContainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09660E31CA5ADEB0025DF18 /* ContainedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		D049F5141CA499060078467D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D049F5161CA499060078467D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D049F51E1CA49E1E0078467D /* CenteringClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteringClipView.swift; sourceTree = "<group>"; };
-		D09660E31CA5ADEB0025DF18 /* ContainedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 			children = (
 				D049F50D1CA499060078467D /* AppDelegate.swift */,
 				D049F50F1CA499060078467D /* ViewController.swift */,
-				D09660E31CA5ADEB0025DF18 /* ContainedView.swift */,
 				D049F5111CA499060078467D /* Assets.xcassets */,
 				D049F51E1CA49E1E0078467D /* CenteringClipView.swift */,
 				D049F5131CA499060078467D /* Main.storyboard */,
@@ -139,7 +136,6 @@
 			files = (
 				D049F5101CA499060078467D /* ViewController.swift in Sources */,
 				D049F50E1CA499060078467D /* AppDelegate.swift in Sources */,
-				D09660E41CA5ADEB0025DF18 /* ContainedView.swift in Sources */,
 				D049F51F1CA49E1E0078467D /* CenteringClipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

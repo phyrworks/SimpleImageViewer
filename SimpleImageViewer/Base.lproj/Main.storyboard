@@ -455,7 +455,7 @@
                             <rect key="frame" x="1" y="1" width="448" height="298"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <view translatesAutoresizingMaskIntoConstraints="NO" id="qB3-70-Fbl" customClass="ContainedView" customModule="SimpleImageViewer" customModuleProvider="target">
+                                <view translatesAutoresizingMaskIntoConstraints="NO" id="qB3-70-Fbl">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BYn-Bl-VDH">
@@ -483,7 +483,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fUX-KJ-wY6">
-                            <rect key="frame" x="433" y="1" width="16" height="298"/>
+                            <rect key="frame" x="434" y="1" width="15" height="298"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -500,6 +500,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_3558" width="3264" height="2448"/>
+        <image name="IMG_3558" width="783.3599853515625" height="587.52001953125"/>
     </resources>
 </document>
