@@ -25,4 +25,6 @@ One needs to work entirely with constraints (instead of frame or bounds) to mani
           
 So what we do is provide constraints from the contained view to the centering clip view, and width and height constraints for the content view.  When resizing the view, resize the width and height constraints, not the frame (or bounds).  This last is very important to recognize - updating the frame or intrinsic content size directly can cause problems with your layout.  Use the width and height constraints *only* to update the size of the contained view.
 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> unless otherwise stated in an individual file (specifically, CenteringClipView.swift has it's own license).
+
 
