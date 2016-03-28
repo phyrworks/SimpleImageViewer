@@ -24,8 +24,8 @@ class ViewController: NSViewController {
                 return
             }
             
-            viewHeightConstraint.constant = (imageView.image?.size.height)! * zoomFactor
-            viewWidthConstraint.constant = (imageView.image?.size.width)! * zoomFactor
+            viewHeightConstraint.constant = imageView.image!.size.height * zoomFactor
+            viewWidthConstraint.constant = imageView.image!.size.width * zoomFactor
         }
     }
     
@@ -33,7 +33,9 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        zoomToFit(nil)
+        dispatch_async(dispatch_get_main_queue()) { [weak self]() -> Void in
+            self?.zoomToFit(nil)
+        }
     }
 
     override var representedObject: AnyObject? {
@@ -42,28 +44,27 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func zoomToActual(sender: NSMenuItem?) {
-        zoomFactor = 1.0
-    }
-    
     @IBAction func zoomIn(sender: NSMenuItem?) {
-
-        if zoomFactor + 0.25 > 4 {
+        if zoomFactor + 0.1 > 4 {
             zoomFactor = 4
         } else if zoomFactor == 0.05 {
-            zoomFactor = 0.25
+            zoomFactor = 0.1
         } else {
-            zoomFactor += 0.25
+            zoomFactor += 0.1
         }
         
     }
     
     @IBAction func zoomOut(sender: NSMenuItem?) {
-        if zoomFactor - 0.25 < 0.05 {
+        if zoomFactor - 0.1 < 0.05 {
             zoomFactor = 0.05
         } else {
-            zoomFactor -= 0.25
-        } 
+            zoomFactor -= 0.1
+        }
+    }
+
+    @IBAction func zoomToActual(sender: NSMenuItem?) {
+        zoomFactor = 1.0
     }
     
     @IBAction func zoomToFit(sender: NSMenuItem?) {
