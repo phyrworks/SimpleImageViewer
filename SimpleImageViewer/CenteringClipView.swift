@@ -68,9 +68,9 @@ import Cocoa
 
 class CenteringClipView: NSClipView {
     
-    override func constrainBoundsRect(proposedBounds: NSRect) -> NSRect {
+    override func constrainBoundsRect(_ proposedBounds: NSRect) -> NSRect {
         
-        guard let documentView = documentView as? NSView else { return super.constrainBoundsRect(proposedBounds) }
+        guard let documentView = documentView else { return super.constrainBoundsRect(proposedBounds) }
         
         
         
@@ -86,9 +86,9 @@ class CenteringClipView: NSClipView {
         
         // Get the insets in terms of the view geometry edges, accounting for flippedness.
         
-        let minYInset = flipped ? insets.top : insets.bottom
+        let minYInset = isFlipped ? insets.top : insets.bottom
         
-        let maxYInset = flipped ? insets.bottom : insets.top
+        let maxYInset = isFlipped ? insets.bottom : insets.top
         
         let minXInset = insets.left
         
@@ -204,7 +204,7 @@ class CenteringClipView: NSClipView {
         
         
         
-        return backingAlignedRect(newClipBoundsRect, options: .AlignAllEdgesNearest)
+        return backingAlignedRect(newClipBoundsRect, options: .alignAllEdgesNearest)
         
     }
     
@@ -218,7 +218,7 @@ class CenteringClipView: NSClipView {
      
      */
     
-    private func convertedContentInsetsToProposedBoundsSize(proposedBoundsSize: NSSize) -> NSEdgeInsets {
+    fileprivate func convertedContentInsetsToProposedBoundsSize(_ proposedBoundsSize: NSSize) -> EdgeInsets {
         
         // Base the scale factor on the width scale factor to the new proposedBounds.
         

@@ -51,7 +51,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dispatch_async(dispatch_get_main_queue()) { [weak self]() -> Void in
+        DispatchQueue.main.async { [weak self]() -> Void in
             self?.zoomToFit(nil)
         }
     }
@@ -61,7 +61,7 @@ class ViewController: NSViewController {
     - parameters:
         - sender: The object that sent the event. The parameter is set to be optional so that it can be called with nil.
     */
-    @IBAction func zoomIn(sender: NSMenuItem?) {
+    @IBAction func zoomIn(_ sender: NSMenuItem?) {
         if zoomFactor + 0.1 > 4 {
             zoomFactor = 4
         } else if zoomFactor == 0.05 {
@@ -77,7 +77,7 @@ class ViewController: NSViewController {
      - parameters:
         - sender: The object that sent the event. The parameter is set to be optional so that it can be called with nil.
      */
-    @IBAction func zoomOut(sender: NSMenuItem?) {
+    @IBAction func zoomOut(_ sender: NSMenuItem?) {
         if zoomFactor - 0.1 < 0.05 {
             zoomFactor = 0.05
         } else {
@@ -90,7 +90,7 @@ class ViewController: NSViewController {
      - parameters:
         - sender: The object that sent the event. The parameter is set to be optional so that it can be called with nil.
      */
-    @IBAction func zoomToActual(sender: NSMenuItem?) {
+    @IBAction func zoomToActual(_ sender: NSMenuItem?) {
         zoomFactor = 1.0
     }
     
@@ -99,7 +99,7 @@ class ViewController: NSViewController {
      - parameters:
         - sender: The object that sent the event. The parameter is set to be optional so that it can be called with nil.
      */
-    @IBAction func zoomToFit(sender: NSMenuItem?) {
+    @IBAction func zoomToFit(_ sender: NSMenuItem?) {
         
         guard imageView!.image != nil else {
             return
