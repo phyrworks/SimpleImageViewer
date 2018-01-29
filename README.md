@@ -1,5 +1,5 @@
 # SimpleImageViewer
-A simple image viewer that demonstrates how to create a centered view within Scroll View using Swift 2.2 and XCode 7.3
+A simple image viewer that demonstrates how to create a centered view within Scroll View using Swift 4 and XCode 9.2
 
 This is a sample project that shows how to build a NSScrollView with an embedded view that centers the content when the size of the content is smaller than the size of the parent scroll view, and allows standard scrolling when the contained view is larger than the parent scroll view size.  The behavior is similar to what you might see with the Preview Application, or any number of other programs.  Unfortunately, Apple's SDK does not give a direct way to do this. By default, the contained view of the NSScrollView is pinned to the lower left corner (or in older code, the upper left corner). Apple provides no method to center the contained view, although many or their products clearly use such behavior.  And while the issue may appear to have several simple solutions, a full solution turns out to be more opaque than an initial take may surmise.  
 
